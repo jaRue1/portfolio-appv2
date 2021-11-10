@@ -2,7 +2,7 @@ import React from 'react'
 import { Person , Mail} from '@material-ui/icons';
 import "./topbar.scss"
 function Topbar( {menuOpen , setMenuOpen }) {
-  return (
+  return (                      // if menuOpen true add the active class
     <div className={"topbar " + (menuOpen && "active")}>
       <div className="wrapper">
         <div className="left">
