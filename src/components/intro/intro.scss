@@ -1,35 +1,36 @@
+@import "../../global.scss";
 .intro {
   background-color: white;
   display: flex;
-  // background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  // background-size: 400% 400%;
-  // animation: gradient 15s ease infinite;
-  // @keyframes gradient {
-  //   0% {
-  //     background-position: 0% 50%;
-  //   }
-  //   50% {
-  //     background-position: 100% 50%;
-  //   }
-  //   100% {
-  //     background-position: 0% 50%;
-  //   }
-  // }
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .left {
     flex: 0.5;
     overflow: hidden;
 
     .imgContainer {
-      width: 700px;
-      height: 700px;
-
+      width: 600px;
+      height: 600px;
       border-radius: 50%;
       display: flex;
       align-items: flex-end;
       justify-content: center;
       float: left;
+      @include mobile{
+        align-items: flex-start;
+        border-radius: 0%;
+      }
       img {
         height: 100%;
+        @include mobile{
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+        }
       }
     }
   }
@@ -44,15 +45,30 @@
       flex-direction: column;
       justify-content: center;
 
+      @include mobile{
+        padding-left: 0;
+        align-items: center;
+
+      }
+
       h1 {
         font-size: 60px;
         margin: 10px 0;
+        @include mobile{
+          font-size: 40px;
+        }
       }
       h2 {
         font-size: 35px;
+        @include mobile{
+          font-size: 25px;
+        }
       }
       h3 {
         font-size: 30px;
+        @include mobile{
+          font-size: 20px;
+        }
         span {
           font-size: inherit;
           color: crimson;
@@ -86,3 +102,20 @@
     }
   }
 }
+
+
+
+ // background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  // background-size: 400% 400%;
+  // animation: gradient 15s ease infinite;
+  // @keyframes gradient {
+  //   0% {
+  //     background-position: 0% 50%;
+  //   }
+  //   50% {
+  //     background-position: 100% 50%;
+  //   }
+  //   100% {
+  //     background-position: 0% 50%;
+  //   }
+  // }
